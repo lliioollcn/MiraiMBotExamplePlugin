@@ -38,8 +38,8 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile fileTree('libs')
-    annotationProcessor fileTree('libs')
+    compile 'com.mohistmc:miraimbot:0.3.0'
+    annotationProcessor 'com.mohistmc:miraimbot:0.3.0'
     compile 'net.mamoe:mirai-core:2.0.0'
     compile 'net.mamoe:mirai-login-solver-selenium:1.0-dev-10'
     compile 'com.alibaba:fastjson:1.2.59'
