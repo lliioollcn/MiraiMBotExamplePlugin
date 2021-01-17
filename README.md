@@ -1,6 +1,6 @@
 # MiraiMBotExamplePlugin
 
-> 这是基于 [MiraiMBot](https://github.com/Mohist-Community/MiraiMBot) 的插件模板
+> 这是 [MiraiMBot](https://github.com/Mohist-Community/MiraiMBot) 的插件模板
 >
 > 强烈建议您在看完 [mirai的开发文档](https://github.com/mamoe/mirai/blob/dev/docs/README.md) 之后再来看这个文档
 >
