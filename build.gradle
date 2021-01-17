@@ -14,6 +14,7 @@ plugins {
 
 group 'com.mohistmc'
 version '1.0-SNAPSHOT'
+
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 repositories {
@@ -58,25 +59,17 @@ dependencies {
     compile 'net.md-5:bungeecord-chat:1.12-SNAPSHOT'
 }
 
-// 解压缩jar包到某目录
 task unzip(type: Copy) {
-    // 原始jar包文件
     def zipFile = file('build/libs/' + project.name + '-' + project.version + '.jar')
-    // 解压缩目标目录
     def outputDir = file("build/repack")
-    // 文件过滤，去除部分class。
     FileTree jarTree = zipTree(zipFile)
-    // 从jar的目录树中输出到目标目录
     from jarTree
     into outputDir
-    zipFile.delete()
 }
 
 task pack(type: Zip) {
     from 'build/repack'
-    //excludes = ['**/build/repack/normal/plugin_113.yml**']  //exclude
     archiveName project.name + '-' + project.version + '.jar'
-    //destinationDir(file('docker/solr-dev/'))
 }
 
 compileJava.dependsOn clean
