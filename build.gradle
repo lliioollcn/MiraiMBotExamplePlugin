@@ -80,7 +80,7 @@ task pack(type: Zip) {
 }
 
 compileJava.dependsOn clean
-unzip.dependsOn build
+build.dependsOn pack
 pack.dependsOn unzip
 
 
