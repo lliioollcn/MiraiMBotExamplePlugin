@@ -18,30 +18,19 @@ version '1.0-SNAPSHOT'
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 repositories {
+    mavenLocal()
     maven { url 'https://maven.aliyun.com/repository/public/' }
     maven { url 'https://maven.mohistmc.com/' }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'com.mohistmc:miraimbot:0.4.1'
-    annotationProcessor 'com.mohistmc:miraimbot:0.4.1'
-    compile 'net.mamoe:mirai-core:2.0.0'
-    compile 'net.mamoe:mirai-login-solver-selenium:1.0-dev-10'
-    compile 'com.alibaba:fastjson:1.2.59'
-    compile 'commons-io:commons-io:2.8.0'
-    compile 'net.minecrell:terminalconsoleappender:1.2.0'
-    compile 'org.jline:jline-terminal-jansi:3.12.1'
-    compile 'org.jline:jline-terminal-jna:3.12.1'
-    compile 'org.jline:jline-reader:3.12.1'
+    compile 'com.mohistmc.miraimbot:core:0.4.1'
+    compile 'com.mohistmc.miraimbot:annotations:0.4.1'
+    annotationProcessor 'com.mohistmc.miraimbot:compiler:0.4.1'
 
     compile 'org.projectlombok:lombok:1.18.8'
     annotationProcessor 'org.projectlombok:lombok:1.18.8'
-    compile 'com.google.guava:guava:21.0'
-    compile "com.mohistmc.yaml:Yaml:0.1"
-    compile 'org.apache.logging.log4j:log4j-api:2.13.3'
-    compile 'org.apache.logging.log4j:log4j-core:2.13.3'
-    compile 'net.md-5:bungeecord-chat:1.12-SNAPSHOT'
 }
 
 task unzip(type: Copy) {
