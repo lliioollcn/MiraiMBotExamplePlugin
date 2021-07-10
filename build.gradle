@@ -18,29 +18,14 @@ version '1.0-SNAPSHOT'
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 repositories {
-    maven {
-        credentials {
-            username '5eca92c3723771c6a5f78860'
-            password 'RZFjd(j-TpwH'
-        }
-        url 'https://packages.aliyun.com/maven/repository/2004385-snapshot-EDtVE0/'
-    }
-    maven {
-        url 'https://maven.aliyun.com/repository/public/'
-    }
-    maven {
-        credentials {
-            username '5eca92c3723771c6a5f78860'
-            password 'RZFjd(j-TpwH'
-        }
-        url 'https://packages.aliyun.com/maven/repository/2004385-release-A6mrLn/'
-    }
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    maven { url 'https://maven.mohistmc.com/' }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'com.mohistmc:miraimbot:0.3.1'
-    annotationProcessor 'com.mohistmc:miraimbot:0.3.0'
+    compile 'com.mohistmc:miraimbot:0.4.1'
+    annotationProcessor 'com.mohistmc:miraimbot:0.4.1'
     compile 'net.mamoe:mirai-core:2.0.0'
     compile 'net.mamoe:mirai-login-solver-selenium:1.0-dev-10'
     compile 'com.alibaba:fastjson:1.2.59'
