@@ -72,14 +72,14 @@ public class ExampleCommand extends CommandExecutor {
 > 同指令一样,MiraiMBot也会帮你自动注册
 ```java
 import com.mohistmc.miraimbot.annotations.Listener;
-import net.mamoe.mirai.event.EventHandler;
+import com.google.common.eventbus.Subscribe;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.MessageEvent;
 
 @Listener
 public class ExampleListener extends SimpleListenerHost {
 
-    @EventHandler
+    @Subscribe
     public void onMessage(MessageEvent event) {
         ExamplePlugin.INSTANCE.getLogger().info("收到消息: {}", event.getMessage());
     }
