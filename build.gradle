@@ -18,7 +18,6 @@ version '1.0-SNAPSHOT'
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 repositories {
-    mavenLocal()
     maven { url 'https://maven.aliyun.com/repository/public/' }
     maven { url 'https://maven.mohistmc.com/' }
     maven {
@@ -28,11 +27,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.22'
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
-    compileOnly 'com.mohistmc.miraimbot:core:0.4.3'
+    compileOnly 'com.mohistmc.miraimbot:core:0.4.5:plain'
     compileOnly 'com.mohistmc.miraimbot:annotations:0.4.2'
     annotationProcessor 'com.mohistmc.miraimbot:compiler:0.4.2'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
     compileOnly("net.mamoe:mirai-core-jvm:2.8.0-M1") {
         exclude group: 'net.mamoe', module: 'mirai-core-api'
         exclude group: 'net.mamoe', module: 'mirai-core-utils'
@@ -55,6 +54,7 @@ dependencies {
     compileOnly "com.mohistmc.yaml:Yaml:0.1"
     compileOnly 'org.apache.logging.log4j:log4j-api:2.14.1'
     compileOnly 'org.apache.logging.log4j:log4j-core:2.14.1'
+
 }
 
 task unzip(type: Copy) {
